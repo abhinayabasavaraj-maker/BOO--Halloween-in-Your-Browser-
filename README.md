@@ -223,34 +223,8 @@ boo-halloween/
 ```
 
 ---
-
-## 🚢 Deployment Instructions (Vercel)
-
-Deploying **BOO!** to Vercel takes less than two minutes:
-
-### Option A: Using the Vercel CLI
-1. Install the Vercel CLI globally (if not already installed):
-   ```bash
-   npm i -g vercel
-   ```
-2. Run the deployment command from the project root:
-   ```bash
-   vercel
-   ```
-3. Follow the CLI prompts (accept default settings; Vite projects build automatically with `npm run build` and output directory `dist`).
-4. For production deployment:
-   ```bash
-   vercel --prod
-   ```
-
-### Option B: Using GitHub & Vercel Dashboard
-1. Push this repository to GitHub.
-2. Log in to [vercel.com](https://vercel.com) and click **"Add New Project"**.
-3. Import your `boo-halloween` repository.
-4. Framework Preset will automatically detect **Vite**.
-5. Click **"Deploy"**. Your live production URL will be ready in ~30 seconds!
-
----
+## Deployment Link: https://boo-halloween-in-your-browser.vercel.app 
+## Youtube Video Link : https://youtu.be/GxNsyYmE_Q0
 
 ## ✅ Hackathon Submission Checklist
 
