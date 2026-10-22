@@ -1,0 +1,194 @@
+@import './theme.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--color-midnight);
+  color: var(--color-ghost);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background: radial-gradient(circle at 50% 10%, #24133b 0%, #100B20 60%, #090614 100%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #140d28;
+}
+::-webkit-scrollbar-thumb {
+  background: #442468;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-pumpkin);
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.spooky-title {
+  font-family: var(--font-spooky);
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 15px rgba(255, 138, 42, 0.5);
+}
+
+/* Interactive elements */
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 3px;
+}
+
+/* UI Utility Classes */
+.btn-primary {
+  background: linear-gradient(135deg, #FF8A2A 0%, #E66A05 100%);
+  color: #100B20;
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 15px rgba(255, 138, 42, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 138, 42, 0.55);
+  background: linear-gradient(135deg, #ff9e4f 0%, #FF8A2A 100%);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-secondary {
+  background: rgba(33, 19, 51, 0.85);
+  color: var(--color-ghost);
+  border: 1px solid var(--color-purple-border);
+  font-family: var(--font-display);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(68, 36, 104, 0.6);
+  border-color: var(--color-lavender);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(185, 154, 232, 0.25);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-ghost);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 245, 233, 0.08);
+  color: var(--color-amber);
+}
+
+/* Glass & Card styles */
+.spooky-card {
+  background: rgba(33, 19, 51, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(185, 154, 232, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.spooky-card:hover {
+  border-color: rgba(255, 138, 42, 0.3);
+}
+
+.glow-orange {
+  box-shadow: var(--glow-pumpkin);
+}
+
+.glow-lavender {
+  box-shadow: var(--glow-lavender);
+}
+
+.glow-mint {
+  box-shadow: var(--glow-mint);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Badge */
+.spooky-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255, 138, 42, 0.15);
+  color: var(--color-amber);
+  border: 1px solid rgba(255, 138, 42, 0.3);
+}
+
+/* Shaking Error Animation Utility */
+.animate-shake {
+  animation: shakeError 0.4s ease-in-out;
+}
